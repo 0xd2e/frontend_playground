@@ -1,0 +1,16 @@
+{% extends "_common/_base.html" %}
+
+{% block title %}Digital Clock{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="./DigitalClock.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="./DigitalClock.js" defer></script>
+{% endblock %}
+
+{% block body %}
+<canvas id="canv-clock" width="500" height="500"></canvas>
+<a href="#" role="button" download="digital-clock.png" id="save-canv">Save clock image</a>
+{% endblock %}

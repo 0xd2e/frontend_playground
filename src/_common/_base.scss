@@ -1,0 +1,14 @@
+$base-color: black;
+$accent-color: darkgray;
+$basic-border: 3px solid $accent-color;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $base-color;
+    color: $accent-color;
+}

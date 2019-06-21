@@ -1,0 +1,24 @@
+{% extends "_common/_base.html" %}
+
+{% block title %}Google Maps{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="./GoogleMaps.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="https://maps.googleapis.com/maps/api/js" defer></script>
+<script src="./GoogleMaps.js" defer></script>
+{% endblock %}
+
+{% block body %}
+<div id="gmap" class="monochrome"></div>
+
+<h2>Marker position</h2>
+<dl>
+    <dt>Latitude</dt>
+    <dd id="latitude"></dd>
+    <dt>Longitude</dt>
+    <dd id="longitude"></dd>
+</dl>
+{% endblock %}

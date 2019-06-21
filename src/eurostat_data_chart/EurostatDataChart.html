@@ -1,0 +1,18 @@
+{% extends "_common/_base.html" %}
+
+{% block title %}Eurostat Data Chart{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="./EurostatDataChart.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha384-QzN1ywg2QLsf72ZkgRHgjkB/cfI4Dqjg6RJYQUqH6Wm8qp/MvmEYn+2NBsLnhLkr" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js" integrity="sha384-fIE8wIddxI8s1yO253uBKjQyxNZ5UuilW9rx7H4ePN7XS7Z9ukIeK+ECX5B8jDAj" crossorigin="anonymous" defer></script>
+<script src="./DataPrepWorker.js" defer></script>
+<script src="./EurostatDataChart.js" defer></script>
+{% endblock %}
+
+{% block body %}
+<canvas id="canv-chart" width="650" height="800"></canvas>
+{% endblock %}
