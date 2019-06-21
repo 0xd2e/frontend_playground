@@ -1,0 +1,53 @@
+# Created with aid of https://www.gitignore.io/
+
+build/
+
+### Git ###
+*.orig
+
+### Linux ###
+*~
+
+# Temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### Node ###
+package-lock.json
+
+# Logs
+npm-debug.log*
+
+# Dependency directory
+node_modules/
+
+# npm cache directory
+.npm/
+
+# eslint cache file
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# dotenv environment variables file
+.env
+
+### VisualStudioCode ###
+.vscode/
+
+### Windows ###
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/

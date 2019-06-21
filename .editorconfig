@@ -1,0 +1,17 @@
+# This file is for unifying consistent coding style for different editors and IDEs
+# More information can be found at https://editorconfig.org/
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.{js,ts,scss}]
+insert_final_newline = true
+
+[*.{js,ts}]
+indent_size = 2
