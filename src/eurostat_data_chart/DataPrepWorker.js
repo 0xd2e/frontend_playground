@@ -3,7 +3,6 @@ function workerScriptWraper() {
   'use strict';
 
   /* eslint-env worker */
-  /* global self */
   /* eslint no-restricted-globals: ["off", "self"] */
 
   function requestTimeout(milliseconds) {
@@ -112,9 +111,9 @@ function workerScriptWraper() {
     // Sort indexes in descending order based on DGP values
     indexes.sort((i, j) => gdp[j] - gdp[i]);
 
-    data.codes = indexes.map(i => codes[i]);
-    data.names = indexes.map(i => names[i]);
-    data.gdp = new Uint16Array(indexes.map(i => gdp[i]));
+    data.codes = indexes.map((i) => codes[i]);
+    data.names = indexes.map((i) => names[i]);
+    data.gdp = new Uint16Array(indexes.map((i) => gdp[i]));
   }
 
 
