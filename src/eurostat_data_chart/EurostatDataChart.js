@@ -9,9 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Based on: https://github.com/chartjs/Chart.js/issues/2830#issuecomment-227867969
   Chart.plugins.register({
-    beforeDraw: (chartInstance) => {
+    beforeDraw: ({ chart }) => {
       // Add opaque background color to a plot
-      const { chart } = chartInstance;
       chart.ctx.fillStyle = 'black';
       chart.ctx.fillRect(0, 0, chart.width, chart.height);
     }
