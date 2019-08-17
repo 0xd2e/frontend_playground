@@ -81,6 +81,7 @@ function buildScripts(done) {
   const steps = [
     gulp.src(paths.src.js),
     eslint(eslintOptions),
+    eslint.format(),
     eslint.failAfterError(),
     jsmin(jsminOptions),
     size({
