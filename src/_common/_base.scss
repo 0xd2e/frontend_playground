@@ -2,10 +2,14 @@ $base-color: black;
 $accent-color: darkgray;
 $basic-border: 3px solid $accent-color;
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
+    text-decoration: none;
 }
 
 body {
