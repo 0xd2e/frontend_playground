@@ -5,8 +5,7 @@
 
 
 const gulp = require('gulp'),
-      pump = require('pump'),
-      autoprefixer = require('autoprefixer');
+      pump = require('pump');
 
 
 // Gulp plugins
@@ -193,21 +192,6 @@ function buildStyles(done) {
     sourceMapEmbed: false
   };
 
-  const autoprefixerOptions = {
-    cascade: true,
-    add: true,
-    remove: true,
-    supports: false,
-    flexbox: false,
-    grid: false,
-    ignoreUnknownVersions: false
-  };
-
-  // https://github.com/postcss/postcss/blob/master/docs/plugins.md
-  const postcssPlugins = [
-    autoprefixer(autoprefixerOptions)
-  ];
-
   // https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api
   const minOptions = {
     compatibility: '*',
@@ -225,7 +209,7 @@ function buildStyles(done) {
     gulp.src(paths.src.scss),
     stylelint(lintOptions),
     sass(sassOptions),
-    postcss(postcssPlugins),
+    postcss(),
     cleancss(minOptions),
     size({
       title: '[Styles]',
