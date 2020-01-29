@@ -2,12 +2,16 @@ $base-color: black;
 $accent-color: darkgray;
 $basic-border: 3px solid $accent-color;
 
+html {
+    box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
     border: none;
     text-decoration: none;
 }
