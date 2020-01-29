@@ -37,9 +37,6 @@ const paths = {
 
 function buildScripts(done) {
 
-  // List additional command line parameters
-  // console.log(process.argv);
-
   const eslintOptions = {
     allowInlineConfig: true,
     cache: true,
