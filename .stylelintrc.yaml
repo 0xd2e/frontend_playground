@@ -1,0 +1,11 @@
+---
+plugins:
+  - "stylelint-scss"
+extends:
+  - "stylelint-config-standard"
+  - "stylelint-config-recommended-scss"
+rules:
+  indentation: 4
+  linebreaks: "unix"
+  max-empty-lines: 2
+  string-quotes: "single"
