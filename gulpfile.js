@@ -10,14 +10,14 @@ const gulp = require('gulp'),
 
 
 // Gulp plugins
-const cleancss  = require('gulp-clean-css'), // eslint-disable-line no-multi-spaces
-      eslint    = require('gulp-eslint'),    // eslint-disable-line no-multi-spaces
-      htmlmin   = require('gulp-htmlmin'),   // eslint-disable-line no-multi-spaces
-      imagemin  = require('gulp-imagemin'),  // eslint-disable-line no-multi-spaces
-      nunjucks  = require('gulp-nunjucks'),  // eslint-disable-line no-multi-spaces
-      postcss   = require('gulp-postcss'),   // eslint-disable-line no-multi-spaces
-      sass      = require('gulp-sass'),      // eslint-disable-line no-multi-spaces
-      size      = require('gulp-size'),      // eslint-disable-line no-multi-spaces
+const cleancss = require('gulp-clean-css'),
+      eslint = require('gulp-eslint'),
+      htmlmin = require('gulp-htmlmin'),
+      imagemin = require('gulp-imagemin'),
+      nunjucks = require('gulp-nunjucks'),
+      postcss = require('gulp-postcss'),
+      sass = require('gulp-sass'),
+      size = require('gulp-size'),
       stylelint = require('gulp-stylelint'),
       uglifyComposer = require('gulp-uglify/composer'),
       jsmin = uglifyComposer(require('uglify-es'), console);
