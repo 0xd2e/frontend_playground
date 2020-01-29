@@ -25,13 +25,12 @@
         "gulp-sass": "^4.0.2",
         "gulp-size": "^3.0.0",
         "gulp-stylelint": "^13.0.0",
-        "gulp-uglify": "^3.0.2",
+        "gulp-terser": "^1.2.0",
         "pump": "^3.0.0",
         "stylelint": "^13.0.0",
         "stylelint-config-recommended-scss": "^4.2.0",
         "stylelint-config-standard": "^19.0.0",
-        "stylelint-scss": "^3.14.2",
-        "uglify-es": "^3.3.9"
+        "stylelint-scss": "^3.14.2"
     },
     "engines": {
         "node": ">=8.17.0",

@@ -19,8 +19,7 @@ const cleancss = require('gulp-clean-css'),
       sass = require('gulp-sass'),
       size = require('gulp-size'),
       stylelint = require('gulp-stylelint'),
-      uglifyComposer = require('gulp-uglify/composer'),
-      jsmin = uglifyComposer(require('uglify-es'), console);
+      terser = require('gulp-terser');
 
 
 const paths = {
@@ -47,31 +46,46 @@ function buildScripts(done) {
     useEslintrc: true
   };
 
-  // https://github.com/mishoo/UglifyJS2#minify-options
-  const jsminOptions = {
+  // https://github.com/terser-js/terser#minify-options
+  const minOptions = {
+
+    parse: {
+      html5_comments: true,
+      shebang: false
+    },
 
     compress: {
       drop_console: true,
       keep_infinity: true,
+      module: false,
       passes: 2,
       toplevel: false,
       warnings: true
     },
 
     mangle: {
-      eval: false
+      eval: false,
+      module: false,
+      toplevel: false
     },
 
     output: {
       ascii_only: true,
-      shebang: true,
+      comments: false,
+      shebang: false,
       webkit: false,
       wrap_iife: false
     },
 
     sourceMap: false,
-    toplevel: false,
+    ecma: 7,
     ie8: false,
+    keep_classnames: false,
+    keep_fnames: false,
+    module: false,
+    nameCache: null,
+    safari10: false,
+    toplevel: false,
     warnings: false
   };
 
@@ -80,7 +94,7 @@ function buildScripts(done) {
     eslint(eslintOptions),
     eslint.format(),
     eslint.failAfterError(),
-    jsmin(jsminOptions),
+    terser(minOptions),
     size({
       title: '[Scripts]',
       gzip: false,
