@@ -67,9 +67,9 @@ window.addEventListener('DOMContentLoaded', () => {
         animation: {
           duration: 1000,
           easing: 'easeInOutQuint',
-          onComplete: (chartAnimationInstance) => {
+          onComplete: ({ chart }) => {
 
-            const { canvas } = chartAnimationInstance.chart;
+            const { canvas } = chart;
             const aButton = document.createElement('a');
 
             aButton.role = 'button';
@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
             canvas.insertAdjacentElement('afterend', aButton);
 
             // Ensure it runs only once
-            chartAnimationInstance.chart.config.options.animation.onComplete = null;
+            chart.config.options.animation.onComplete = null;
           }
         },
 
