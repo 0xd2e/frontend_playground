@@ -55,8 +55,8 @@ dd {
     margin: 6px;
     padding: 4px 8px;
     border: $basic-border;
-    background-color: $base-color;
-    color: $accent-color;
+    background-color: $primary-color;
+    color: $secondary-color;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.2em;
@@ -68,9 +68,9 @@ dd {
 .gmap-control-btn:hover,
 .gmap-control-btn:active,
 .gmap-control-btn:focus {
-    border-color: $base-color;
-    background-color: $accent-color;
-    color: $base-color;
+    border-color: $primary-color;
+    background-color: $secondary-color;
+    color: $primary-color;
 }
 
 .monochrome {
