@@ -51,6 +51,8 @@ window.addEventListener('DOMContentLoaded', () => {
           yAxisID: verticalAxisId,
           label: '',
           data: gdp,
+          barPercentage: 0.9,
+          categoryPercentage: 0.8,
           backgroundColor: baseColor,
           borderColor: baseColor,
           borderWidth: 0,
@@ -125,8 +127,6 @@ window.addEventListener('DOMContentLoaded', () => {
             position: 'left',
             offset: true,
             stacked: false,
-            barPercentage: 0.9,
-            categoryPercentage: 0.8,
             gridLines: {
               display: false,
               offsetGridLines: true
