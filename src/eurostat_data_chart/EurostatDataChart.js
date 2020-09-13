@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const verticalAxisId = 'vax-countries';
     const horizontalAxisId = 'hax-gdp';
 
-    const config = {
+    const barChartOptions = {
 
       type: 'horizontalBar',
 
@@ -194,7 +194,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     };
 
-    return new Chart(ctx, config);
+    return new Chart(ctx, barChartOptions);
   }
 
 
