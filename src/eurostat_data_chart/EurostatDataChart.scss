@@ -1,4 +1,4 @@
-@import '../_common/_base.scss';
+@import '../_common/base';
 
 body {
     display: grid;
@@ -29,9 +29,9 @@ canvas {
     color: $secondary-color;
     user-select: none;
     cursor: pointer;
-}
 
-#save-canv:hover {
-    border-color: #1e90ff;
-    color: #1e90ff;
+    &:hover {
+        border-color: #1e90ff;
+        color: #1e90ff;
+    }
 }

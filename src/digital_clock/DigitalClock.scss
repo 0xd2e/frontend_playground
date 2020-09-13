@@ -1,4 +1,4 @@
-@import '../_common/_base.scss';
+@import '../_common/base';
 
 $clock-color: #28d1fa;
 
@@ -23,9 +23,9 @@ canvas {
     background-color: $primary-color;
     color: $secondary-color;
     user-select: none;
-}
 
-#save-canv:hover {
-    border-color: $clock-color;
-    color: $clock-color;
+    &:hover {
+        border-color: $clock-color;
+        color: $clock-color;
+    }
 }
