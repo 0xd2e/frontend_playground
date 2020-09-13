@@ -2,7 +2,9 @@
     "name": "frontend_playground",
     "version": "1.0.0",
     "description": "A collection of miscellaneous standalone pages.",
-    "scripts": {},
+    "scripts": {
+        "lint": "eslint ./src/**/*.js"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/f171a9a3497c8b/frontend_playground.git"
