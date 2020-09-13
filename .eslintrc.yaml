@@ -9,18 +9,21 @@ env:
   commonjs: false
   shared-node-browser: true
   es6: true
+  es2017: true
+  es2020: true
   worker: false
   amd: false
   mocha: false
   jasmine: false
   jest: false
+  qunit: false
   jquery: false
   mongo: false
   serviceworker: false
   webextensions: false
 parser: "esprima"
 parserOptions:
-  ecmaVersion: 9
+  ecmaVersion: 11
   sourceType: "script"
   ecmaFeatures:
     globalReturn: false
@@ -60,6 +63,10 @@ rules:
     - "error"
     - allowLoop: true
       allowSwitch: false
+  no-multiple-empty-lines:
+    - "error"
+    - max: 2
+      maxEOF: 1
   no-param-reassign:
     - "off"
     - props: false
@@ -72,9 +79,9 @@ rules:
     - "WithStatement"
   padded-blocks:
     - "off"
-    - blocks: always
-      classes: always
-      switches: never
+    - blocks: "always"
+      classes: "always"
+      switches: "never"
   prefer-destructuring:
     - "error"
     - VariableDeclarator:
