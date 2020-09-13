@@ -11,30 +11,30 @@
     "private": true,
     "dependencies": {},
     "devDependencies": {
-        "autoprefixer": "^9.8.0",
-        "eslint": "^7.2.0",
-        "eslint-config-airbnb-base": "^14.1.0",
-        "eslint-plugin-import": "^2.21.1",
+        "autoprefixer": "^9.8.6",
+        "eslint": "^7.8.1",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-import": "^2.22.0",
         "gulp": "^4.0.2",
         "gulp-clean-css": "^4.3.0",
         "gulp-eslint": "^6.0.0",
         "gulp-htmlmin": "^5.0.1",
         "gulp-imagemin": "^7.1.0",
-        "gulp-nunjucks": "^5.0.1",
+        "gulp-nunjucks": "^5.0.2",
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.1.0",
         "gulp-size": "^3.0.0",
         "gulp-stylelint": "^13.0.0",
-        "gulp-terser": "^1.2.0",
+        "gulp-terser": "^1.4.0",
         "pump": "^3.0.0",
-        "stylelint": "^13.6.0",
+        "stylelint": "^13.7.1",
         "stylelint-config-recommended-scss": "^4.2.0",
         "stylelint-config-standard": "^20.0.0",
-        "stylelint-scss": "^3.17.2"
+        "stylelint-scss": "^3.18.0"
     },
     "engines": {
-        "node": ">=8.17.0",
-        "npm": ">=6.14.5"
+        "node": ">=12.18.3",
+        "npm": ">=6.14.8"
     },
     "browserslist": [
         "last 4 versions",
