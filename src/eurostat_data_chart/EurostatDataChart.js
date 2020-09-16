@@ -88,6 +88,10 @@ window.addEventListener('DOMContentLoaded', () => {
           }
         },
 
+        hover: {
+          animationDuration: 0
+        },
+
         layout: {
           padding: 20
         },
