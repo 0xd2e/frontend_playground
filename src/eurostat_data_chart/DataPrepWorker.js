@@ -85,11 +85,9 @@ function workerScriptWraper() {
   }
 
 
-  function cleanData(data) {
+  function cleanData({ codes, names }) {
 
     // Clean data in place (mutate the object)
-
-    const { codes, names } = data;
 
     // Regular expression for finding a comment
     // inside parenthesis at the end of a string
