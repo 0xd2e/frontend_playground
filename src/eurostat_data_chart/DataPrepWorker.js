@@ -127,9 +127,11 @@ function workerScriptWraper() {
     // https://ec.europa.eu/eurostat/web/json-and-unicode-web-services/getting-started/rest-request
     const base = 'http://ec.europa.eu/eurostat/wdds/rest/data/v2.1/json/en/';
 
-    // Volume index of Gross Domestic Product per capita in Purchasing Power Standards in 2017, EU28=100
+    // Volume index of Gross Domestic Product per capita in Purchasing Power Standards in a particular year,
+    // where EU28=100 (before 2020) and EU27_2020=100 (from 2020)
     // https://ec.europa.eu/eurostat/web/products-datasets/-/tec00114
-    const requestURL = `${base}tec00114?time=2017&precision=4`;
+    const year = 2019;
+    const requestURL = `${base}tec00114?time=${year}&precision=4`;
 
     const rawData = await getData(requestURL, 3000);
 
@@ -144,7 +146,7 @@ function workerScriptWraper() {
     sortData(data);
 
     data.summary = {
-      title: 'GDP per capita in PPSs for EEA countries in 2017\nBased on Eurostat data',
+      title: `GDP per capita in PPSs for EEA countries in ${year}\nBased on Eurostat data`,
       mean: calculateArithmeticMean(data.gdp)
     };
 
