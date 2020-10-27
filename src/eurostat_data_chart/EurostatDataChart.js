@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   Chart.plugins.register({
     beforeDraw: ({ chart }) => {
       // Add opaque background color to a plot
-      chart.ctx.fillStyle = 'black';
+      chart.ctx.fillStyle = '#000';
       chart.ctx.fillRect(0, 0, chart.width, chart.height);
     }
   });
@@ -24,10 +24,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const centerY = height / 2 >> 0;
     const message = 'Data cannot be retrieved';
 
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, width, height);
 
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = '#c00';
     ctx.font = '25px Courier bold';
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'center';
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function drawChart({ names, gdp, summary }) {
 
-    const baseColor = 'darkgray';
+    const baseColor = '#aaa';
     const verticalAxisId = 'vax-countries';
     const horizontalAxisId = 'hax-gdp';
 
@@ -56,8 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
           backgroundColor: baseColor,
           borderColor: baseColor,
           borderWidth: 0,
-          hoverBackgroundColor: 'dodgerblue',
-          hoverBorderColor: 'dodgerblue',
+          hoverBackgroundColor: '#1e90ff',
+          hoverBorderColor: '#1e90ff',
           hoverBorderWidth: 0
         }]
       },
@@ -146,13 +146,13 @@ window.addEventListener('DOMContentLoaded', () => {
             stacked: false,
             gridLines: {
               display: true,
-              color: 'rgba(90, 90, 90, 0.3)',
+              color: '#333',
               lineWidth: 1,
               drawBorder: true,
               drawOnChartArea: true,
               drawTicks: true,
               zeroLineWidth: 1,
-              zeroLineColor: 'rgba(90, 90, 90, 0.3)',
+              zeroLineColor: '#333',
               offsetGridLines: false
             },
             ticks: {
@@ -173,7 +173,7 @@ window.addEventListener('DOMContentLoaded', () => {
             mode: 'vertical',
             scaleID: horizontalAxisId,
             value: summary.mean,
-            borderColor: 'red',
+            borderColor: '#c00',
             borderWidth: 2,
             borderDash: [12, 10],
             borderDashOffset: 0,
@@ -181,7 +181,7 @@ window.addEventListener('DOMContentLoaded', () => {
               backgroundColor: 'rgba(0,0,0,0.3)',
               fontSize: 12,
               fontStyle: 'normal',
-              fontColor: 'red',
+              fontColor: '#c00',
               xPadding: 4,
               yPadding: 4,
               cornerRadius: 0,
