@@ -209,12 +209,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let dataWorker = new Worker(URL.createObjectURL(localWorkerFileWorkaround));
 
-  dataWorker.onmessage = (msg) => {
-
-    if (msg.data === null) {
+  dataWorker.onmessage = ({ data }) => {
+    if (data === null) {
       drawMissingDataMessage();
     } else {
-      drawChart(msg.data);
+      drawChart(data);
     }
 
     dataWorker.terminate();
