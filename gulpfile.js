@@ -231,13 +231,16 @@ function optimizeImages(done) {
 
     // GIF
     imagemin.gifsicle({
+      colors: 256,
       interlaced: true,
       optimizationLevel: 2 // value between 1 and 3
     }),
 
     // JPEG
-    imagemin.jpegtran({
+    imagemin.mozjpeg({
+      quality: 60,
       progressive: true,
+      revert: false,
       arithmetic: false // valid only for lossless conversion (when progressive is set to false)
     }),
 
