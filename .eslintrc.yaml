@@ -27,7 +27,7 @@ parserOptions:
   sourceType: "script"
   ecmaFeatures:
     globalReturn: false
-    impliedStrict: true
+    impliedStrict: false
     jsx: false
 rules:
   comma-dangle:
@@ -40,10 +40,7 @@ rules:
     - "error"
     - 2
     - SwitchCase: 0
-      VariableDeclarator:
-        var: 2
-        let: 2
-        const: 3
+      VariableDeclarator: "first"
   linebreak-style:
     - "error"
     - "unix"
@@ -59,29 +56,29 @@ rules:
       ignoreRegExpLiterals: true
   no-bitwise: "off"
   no-continue: "off"
-  no-labels:
+  no-mixed-operators:
     - "error"
-    - allowLoop: true
-      allowSwitch: false
+    - "groups":
+        - ["%", "**"]
+        - ["%", "*"]
+        - ["%", "+"]
+        - ["%", "-"]
+        - ["%", "/"]
+        - ["&", "|", "<<", ">>", ">>>"]
+        - ["==", "!=", "===", "!=="]
+        - ["&&", "||"]
+      "allowSamePrecedence": false
   no-multiple-empty-lines:
     - "error"
     - max: 2
       maxEOF: 1
-  no-param-reassign:
-    - "off"
-    - props: false
-  no-plusplus:
-    - "off"
-    - allowForLoopAfterthoughts: true
+  no-param-reassign: "off"
+  no-plusplus: "off"
   no-prototype-builtins: "off"
   no-restricted-syntax:
     - "error"
     - "WithStatement"
-  padded-blocks:
-    - "off"
-    - blocks: "always"
-      classes: "always"
-      switches: "never"
+  padded-blocks: "off"
   prefer-destructuring:
     - "error"
     - VariableDeclarator:
@@ -108,5 +105,5 @@ rules:
     - "error"
     - "always"
   strict:
-    - "off"
+    - "error"
     - "safe"

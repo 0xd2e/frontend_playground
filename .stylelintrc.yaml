@@ -5,6 +5,13 @@ extends:
   - "stylelint-config-standard"
   - "stylelint-config-recommended-scss"
 rules:
+  at-rule-empty-line-before:
+    - "always"
+    - except:
+      - "blockless-after-same-name-blockless"
+      - "first-nested"
+    - ignore:
+      - "after-comment"
   indentation: 4
   linebreaks: "unix"
   max-empty-lines: 2

@@ -10,8 +10,8 @@ indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
 
-[*.{js,ts,scss}]
+[*.{js,ts,scss,yaml}]
 insert_final_newline = true
 
-[*.{js,ts}]
+[*.{js,ts,yaml}]
 indent_size = 2
