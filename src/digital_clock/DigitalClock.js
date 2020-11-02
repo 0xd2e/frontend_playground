@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
    * -- 24 hour clock format
    */
 
-  const degToRad = (angle) => angle * Math.PI / 180, // eslint-disable-line no-mixed-operators
+  const degToRad = (angle) => angle * Math.PI / 180,
         canv = document.getElementById('canv-clock'),
         ctx = canv.getContext('2d'),
         centerX = canv.width / 2 >> 0,

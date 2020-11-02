@@ -1,7 +1,7 @@
 'use strict';
 
 /* eslint-env node, amd */
-/* eslint one-var: "off" */
+/* eslint one-var: "off", strict: ["error", "global"] */
 
 
 const gulp = require('gulp'),
