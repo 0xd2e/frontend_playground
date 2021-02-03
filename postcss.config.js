@@ -3,6 +3,7 @@
 /* eslint-env node, amd */
 /* eslint global-require: "off" */
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+/* eslint strict: ["error", "global"] */
 
 
 const autoprefixerOptions = {
