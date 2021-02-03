@@ -223,6 +223,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
 
+  drawMessage('Loading...', '#aaa');
   dataWorker.postMessage(null);
 }, {
   capture: false,
