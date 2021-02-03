@@ -17,17 +17,19 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  function drawMissingDataMessage() {
+  function drawMessage(message, fontColor) {
+
+    // message -- string, short text that will be displayed on the canvas
+    // fontColor -- string, must be valid CSS color
 
     const { width, height } = canv;
     const centerX = width / 2 >> 0;
     const centerY = height / 2 >> 0;
-    const message = 'Data cannot be retrieved';
 
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, width, height);
 
-    ctx.fillStyle = '#c00';
+    ctx.fillStyle = fontColor;
     ctx.font = '25px Courier bold';
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'center';
@@ -211,7 +213,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   dataWorker.onmessage = ({ data }) => {
     if (data === null) {
-      drawMissingDataMessage();
+      drawMessage('Data cannot be retrieved', '#c00');
     } else {
       drawChart(data);
     }
