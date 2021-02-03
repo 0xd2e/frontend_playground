@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "A collection of miscellaneous standalone pages.",
     "scripts": {
-        "lint": "eslint ./src/**/*.js"
+        "lint": "eslint --report-unused-disable-directives ./src/**/*.js"
     },
     "repository": {
         "type": "git",
@@ -13,9 +13,9 @@
     "private": true,
     "dependencies": {},
     "devDependencies": {
-        "autoprefixer": "^10.0.1",
-        "eslint": "^7.12.1",
-        "eslint-config-airbnb-base": "^14.2.0",
+        "autoprefixer": "^10.2.4",
+        "eslint": "^7.19.0",
+        "eslint-config-airbnb-base": "^14.2.1",
         "eslint-plugin-import": "^2.22.1",
         "gulp": "^4.0.2",
         "gulp-clean-css": "^4.3.0",
@@ -27,17 +27,17 @@
         "gulp-sass": "^4.1.0",
         "gulp-size": "^3.0.0",
         "gulp-stylelint": "^13.0.0",
-        "gulp-terser": "^1.4.0",
-        "postcss": "^8.1.4",
+        "gulp-terser": "^2.0.1",
+        "postcss": "^8.2.4",
         "pump": "^3.0.0",
-        "stylelint": "^13.7.2",
+        "stylelint": "^13.9.0",
         "stylelint-config-recommended-scss": "^4.2.0",
         "stylelint-config-standard": "^20.0.0",
         "stylelint-scss": "^3.18.0"
     },
     "engines": {
-        "node": ">=12.19.0",
-        "npm": ">=6.14.8"
+        "node": ">=14.15.4",
+        "npm": ">=7.5.2"
     },
     "browserslist": [
         "last 4 versions",
